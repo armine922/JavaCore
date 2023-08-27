@@ -1,4 +1,4 @@
-package homework.chapter2;
+package classwork.chapter2;
 
 public class BlockTest {
     public static void main(String args[]){
