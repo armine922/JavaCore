@@ -58,7 +58,7 @@ public class FigurePainter {
 
         System.out.println("--------------");
 
-
+          //5
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < (height - i - 1); j++)
