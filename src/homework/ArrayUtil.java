@@ -83,6 +83,7 @@ public class ArrayUtil {
         }
         System.out.println(sum);
         System.out.println("---------------------");
+
         //10
         System.out.println(sum / 2);
         System.out.println("---------------------");
