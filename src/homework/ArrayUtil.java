@@ -67,12 +67,13 @@ public class ArrayUtil {
         System.out.println("---------------------");
 
         //8
+        int odd = 0;
         for (i = 0; i < numbers.length; i++) {
-            if (numbers[i] % 2 == 1) {
-                count++;
+            if (numbers[i] % 2 == 1 || -numbers[i] % 2 == 1) {
+                odd++;
             }
         }
-        System.out.println(count);
+        System.out.println(odd);
         System.out.println("---------------------");
 
         //9
