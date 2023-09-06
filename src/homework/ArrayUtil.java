@@ -25,12 +25,15 @@ public class ArrayUtil {
         for (i = 0; i < numbers.length; i++) {
             int min = numbers[0];
             if (min > numbers[i]) {
-                min = numbers[i];
+                min=numbers[i];
                 System.out.println(min);
-                System.out.println("---------------------");
+
 
             }
-        }
+            }
+        System.out.println("---------------------");
+
+
 //6
         int midvalue = 0;
         midvalue = numbers.length / 2;
