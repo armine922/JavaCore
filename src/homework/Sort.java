@@ -12,15 +12,15 @@ public class Sort {
                     int k = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = k;
-                    System.out.print("{");
+
                     for (int x : array) {
-                        System.out.print(x);
+                        System.out.print(x + "|");
 
                     }
-                    System.out.print("}");
                     System.out.println();
 
                 }
+
 
             }
         }
