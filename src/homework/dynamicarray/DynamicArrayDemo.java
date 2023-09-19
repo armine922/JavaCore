@@ -6,9 +6,9 @@ public class DynamicArrayDemo {
 
         DynamicArray da = new DynamicArray();
         da.print();
-        da.add(9);
+        da.add(5);
         da.print();
-        da.getByIndex(23);
+        da.getByIndex(6);
 
     }
 }

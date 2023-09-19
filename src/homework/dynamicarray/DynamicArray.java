@@ -11,17 +11,17 @@ public class DynamicArray {
     //և ավելացնենք
     public void add(int value) {
         this.extend(0);
-        array[size++] = value;
+      array[size++]=value;
     }
 
     //1․ ստեղծել հին մասիվից 10 էլեմենտ ավելի մեծ մասիվ
     //2․ քցել հին մասիվի էլեմենտները նորի մեջ
     //3․ հին մասիվի հղումը կապենք նոր մասիվի հղման հետ։
-    private void extend(int size) {
-        if (array.length + size > array.length) {
+    private void extend(int count) {
+        if (size + count > array.length) {
             int newLength = (array.length + 10);
             int newArr[] = new int[newLength];
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i < size; i++) {
                 newArr[i] = array[i];
             }
             array = newArr;
@@ -43,12 +43,12 @@ public class DynamicArray {
 
     //տպել մասիվի ավելացված էլեմենտները
     public void print() {
-        if (array.length > 0) {
+        if (size > 0) {
             for (int i = 0; i < array.length; i++) {
                 System.out.print(array[i] + "|");
             }
-            System.out.println();
-        }
+
+        }System.out.println();
 
     }
 
