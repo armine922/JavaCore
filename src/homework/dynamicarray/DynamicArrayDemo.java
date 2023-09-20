@@ -7,8 +7,10 @@ public class DynamicArrayDemo {
         DynamicArray da = new DynamicArray();
         da.print();
         da.add(5);
+        da.add(7);
+        da.add(9);
         da.print();
-        da.getByIndex(6);
+        da.getByIndex(1);
 
     }
 }

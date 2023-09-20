@@ -10,41 +10,38 @@ public class DynamicArray {
     //ստուգել եթե մասիվի մեջ տեղ չկա-> կանչել extend()
     //և ավելացնենք
     public void add(int value) {
-        this.extend(0);
+        if (size == array.length){
+        this.extend();}
       array[size++]=value;
     }
 
     //1․ ստեղծել հին մասիվից 10 էլեմենտ ավելի մեծ մասիվ
     //2․ քցել հին մասիվի էլեմենտները նորի մեջ
     //3․ հին մասիվի հղումը կապենք նոր մասիվի հղման հետ։
-    private void extend(int count) {
-        if (size + count > array.length) {
+    private void extend() {
             int newLength = (array.length + 10);
             int newArr[] = new int[newLength];
             for (int i = 0; i < size; i++) {
                 newArr[i] = array[i];
             }
             array = newArr;
-        }
+
     }
 
     //եթե տրված ինդեքսը մեր ունեցած մասիվի ինդեքսի սահմաններում է, վերադարձնել
     // մասիվի index-երրորդ էլեմենտը։ Հակառակ դեպքում վերադարձնել -1։
     public int getByIndex(int index) {
-        if (index < array.length) {
-            return array[index];
-        }
-        if (index >= array.length || index < 0) {
+        if (index >= size || index < 0) {
             System.err.println("Array index error");
-
+return 0;
         }
-        return -1;
+        return array[index];
     }
 
     //տպել մասիվի ավելացված էլեմենտները
     public void print() {
         if (size > 0) {
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i < size; i++) {
                 System.out.print(array[i] + "|");
             }
 
