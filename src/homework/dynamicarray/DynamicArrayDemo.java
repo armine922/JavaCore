@@ -8,9 +8,20 @@ public class DynamicArrayDemo {
         da.print();
         da.add(5);
         da.add(7);
-        da.add(9);
+        da.add(8);
+        da.add(8);
+        da.add(18);
+        da.add(3);
         da.print();
-        da.getByIndex(1);
+
+        da.deleteByIndex(2);
+        da.print();
+        da.add(0, 1);
+        da.print();
+        da.exists(3);
+
+        da.getIndexByValue(4);
+
 
     }
 }
