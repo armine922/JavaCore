@@ -33,7 +33,7 @@ public class DynamicArray {
     // մասիվի index-երրորդ էլեմենտը։ Հակառակ դեպքում վերադարձնել -1։
     public int getByIndex(int index) {
         if (index >= size || index < 0) {
-            System.err.println("Array index error");
+            System.out.println("Array index error");
             return 0;
         }
         return array[index];
@@ -95,12 +95,14 @@ public class DynamicArray {
 
     //Վերադարձնել true եթե տրված value-ն կա մեր մասիվի մեջ, եթե ոչ false
     public boolean exists(int value) {
-        for (int i = array[0]; i < array.length; i++) {
+        for (int i = 0; i < size; i++) {
 
             if (array[i] == value) {
-
+                int k = value;
+                array[i] = k;
+                return true;
             }
-            return true;
+
 
         }
         return false;
@@ -110,12 +112,17 @@ public class DynamicArray {
 //եթե չկա, -1
     public int getIndexByValue(int value) {
         for (int i = 0; i < size; i++) {
+
             if (array[i] == value) {
-                System.out.println(i + " ");
+                int index = value;
+                array[i] = index;
+                System.out.print(i + " ");
+                break;
             }
 
         }
-
         return 0;
+
+
     }
 }
