@@ -15,11 +15,11 @@ public class DynamicArrayDemo {
         da.print();
         int a = da.getByIndex(3);
         System.out.println(a);
-        da.deleteByIndex(2);
+        da.deleteByIndex(0);
         da.print();
         da.add(0, 1);
         da.print();
-        boolean b=da.exists(5);
+        boolean b = da.exists(3);
         System.out.println(b);
 
         da.getIndexByValue(8);

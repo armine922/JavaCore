@@ -57,7 +57,7 @@ public class DynamicArray {
 
         int value = this.array[index];
         for (int i = index + 1; i < this.size; i++) {
-            this.array[i - 1] = array[i];
+            array[i - 1] = array[i];
 
         }
         this.size--;
@@ -82,7 +82,6 @@ public class DynamicArray {
 //Եթե չկա նման ինդեքս, տպել որ չկա
     public void add(int index, int value) {
         for (int i = size - 1; i >= index; i--) {
-            int k = array[i];
             array[i + 1] = array[i];
         }
 
@@ -98,8 +97,8 @@ public class DynamicArray {
         for (int i = 0; i < size; i++) {
 
             if (array[i] == value) {
-                int k = value;
-                array[i] = k;
+
+                array[i] = value;
                 return true;
             }
 
@@ -114,9 +113,8 @@ public class DynamicArray {
         for (int i = 0; i < size; i++) {
 
             if (array[i] == value) {
-                int index = value;
-                array[i] = index;
-                System.out.print(i + " ");
+                array[i] = value;
+                System.out.println(i + " ");
                 break;
             }
 
