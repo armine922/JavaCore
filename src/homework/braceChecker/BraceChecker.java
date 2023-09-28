@@ -21,26 +21,43 @@ public class BraceChecker {
                     stack.push(c);
                     break;
                 case ')':
+
                     ch = (char) stack.pop();
-                    if (ch != '(') {
-                        System.err.println("Error at " + i + ":" + "Opened " + "'" + ch + "'" + " but closed " + "'" + c + "'");
+                    if (ch == 0) {
+                        System.err.println("Error at " + i + ":" + "Closed " + c + ",but NOT OPENED");
+                        break;
+                    } else if (ch != '(') {
+                        System.err.println("Error at " + i + ":" + "Opened " + ch + "but closed " + c);
                     }
                     break;
 
                 case '}':
                     ch = (char) stack.pop();
-                    if (ch != '{') {
-                        System.err.println("Error at " + i + ":" + "Opened " + "'" + ch + "'" + " but closed " + "'" + c + "'");
+                    if (ch == 0) {
+                        System.err.println("Error at " + i + ":" + "Closed " + c + ",but NOT OPENED");
+                        break;
+                    } else if (ch != '{') {
+                        System.err.println("Error at " + i + ":" + "Opened " + ch + "but closed " + c);
                     }
                     break;
 
                 case ']':
                     ch = (char) stack.pop();
-                    if (ch != '[') {
-                        System.err.println("Error at " + i + ":" + "Opened " + "'" + ch + "'" + " but closed " + "'" + c + "'");
+                    if (ch == 0) {
+                        System.err.println("Error at " + i + ":" + "Closed" + c + " but NOT OPENED");
+                        break;
+                    } else if (ch != '[') {
+                        System.err.println("Error at " + i + ":" + "Opened " + ch + "but closed " + c);
                     }
                     break;
             }
+
+        }
+        char ch;
+        while ((ch = (char) stack.pop()) != 0) {
+            System.err.println("Opened " + ch + " but NOT CLOSED");
+
         }
     }
 }
+
