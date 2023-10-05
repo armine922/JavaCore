@@ -42,12 +42,12 @@ public class EmployeeDemo {
                 case "3":
                     System.out.println("Please input employeeId.");
                     String keyWord = scanner.nextLine();
-                    es.search1(keyWord);
+                    es.searchById(keyWord);
                     break;
                 case "4":
                     System.out.println("Please input Company Name");
                     keyWord = scanner.nextLine();
-                    es.search2(keyWord);
+                    es.searchByCompany(keyWord);
                     break;
                 default:
                     System.out.println("Invalid command.Try again!");

@@ -1,4 +1,6 @@
-package classwork;
+package bookLibrary;
+
+import bookLibrary.Book;
 
 public class BookStorage {
     private Book[] books = new Book[10];

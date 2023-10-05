@@ -12,7 +12,7 @@ public class EmployeeStorage {
 
     }
 
-    public void search1(String keyWord) {
+    public void searchById(String keyWord) {
         for (int i = 0; i < size; i++) {
             if (men[i].getEmployeeId().contains(keyWord)) {
                 System.out.println(men[i].getName() + " " + men[i].getSurname() +
@@ -22,7 +22,8 @@ public class EmployeeStorage {
 
     }
 
-    public void search2(String keyWord) {
+
+    public void searchByCompany(String keyWord) {
         for (int i = 0; i < size; i++) {
             if (men[i].getCompany().contains(keyWord)) {
                 System.out.println(men[i].getName() + " " + men[i].getSurname() +

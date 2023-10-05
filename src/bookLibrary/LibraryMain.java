@@ -1,4 +1,7 @@
-package classwork;
+package bookLibrary;
+
+import bookLibrary.Book;
+import bookLibrary.BookStorage;
 
 import java.util.Scanner;
 
