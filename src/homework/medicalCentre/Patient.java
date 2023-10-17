@@ -1,23 +1,35 @@
 package homework.medicalCentre;
 
+import java.util.Date;
+
 public class Patient extends Person {
-    private String registerDate;
+    private Date registerDate;
     private Doctor doctor;
+    private Date dateofBirthday;
 
     public Patient() {
     }
 
-    public Patient(String name, String surname, String id, String phoneNumber, String registerDate, Doctor doctor) {
+    public Patient(String name, String surname, String id, String phoneNumber, Date registerDate, Doctor doctor, Date dateofBirthday) {
         super(name, surname, id, phoneNumber);
         this.registerDate = registerDate;
         this.doctor = doctor;
+        this.dateofBirthday = dateofBirthday;
     }
 
-    public String getRegisterDate() {
+    public Date getDateofBirthday() {
+        return dateofBirthday;
+    }
+
+    public void setDateofBirthday(Date dateofBirthday) {
+        this.dateofBirthday = dateofBirthday;
+    }
+
+    public Date getRegisterDate() {
         return registerDate;
     }
 
-    public void setRegisterDate(String registerDate) {
+    public void setRegisterDate(Date registerDate) {
         this.registerDate = registerDate;
     }
 
@@ -35,8 +47,9 @@ public class Patient extends Person {
                 ", surname='" + this.getSurname() + '\'' +
                 ", id='" + this.getId() + '\'' +
                 ", phoneNumber='" + this.getPhoneNumber() + '\'' +
-                "registerDate='" + this.registerDate + '\'' +
-                ", doctor=" + this.doctor +
+                "registerDate=" + registerDate +
+                ", doctor=" + doctor +
+                ", dateofBirthday=" + dateofBirthday +
                 '}';
     }
 }

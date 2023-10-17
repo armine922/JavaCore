@@ -1,5 +1,7 @@
 package homework.medicalCentre;
 
+import java.text.ParseException;
+import java.util.Date;
 
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ public class Administration {
     private static PatientStorage ps = new PatientStorage();
     private static DoctorStorage ds = new DoctorStorage();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         boolean isRun = true;
         while (isRun) {
@@ -60,14 +62,19 @@ public class Administration {
                     System.out.println("Please input patient's phonenumber");
                     phonenumber = scanner.nextLine();
                     System.out.println("Please input patient's registerDate");
-                    String registerDate = scanner.nextLine();
+                    Date registerDate = new Date();
+                    String registerDateStr = scanner.nextLine();
+                    System.out.println("Please input patient's date of Birthday");
+                    String dateofBirthdayStr = scanner.nextLine();
+                    Date dateofBirthday = new Date();
+                    dateofBirthday = DateUtil.stringToDate(dateofBirthdayStr);
                     ds.print();
                     System.out.println("Please choose doctor's name");
                     String doctorname = scanner.nextLine();
                     System.out.println("Please choose doctor's surname");
                     String doctorsurname = scanner.nextLine();
                     Doctor doc = ds.getByName(doctorname, doctorsurname);
-                    Patient patient = new Patient(name, surname, id, phonenumber, registerDate, doc);
+                    Patient patient = new Patient(name, surname, id, phonenumber, registerDate, doc, dateofBirthday);
                     ps.add(patient);
                     System.out.println("Patient is added!");
                     break;
