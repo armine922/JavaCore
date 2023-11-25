@@ -1,0 +1,4 @@
+Hello IT Space
+I wish I overcame this task,
+and these words are on console.Not an esasy
+task.Task consists of 5 methods.
